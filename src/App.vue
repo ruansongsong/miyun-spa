@@ -1,23 +1,25 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
-    <router-view></router-view>
+    <swiper></swiper>
+
+    <feed></feed>
   </div>
 </template>
 
 <script>
+import swiper from './components/swiper';
+import feed from './components/feed';
+
 export default {
-  name: 'app',
+  components: {
+    swiper,
+    feed,
+  },
 };
 </script>
 
-<style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+<style lang="less">
+
+@import "../style/core/reset";
+
 </style>

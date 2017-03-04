@@ -1,0 +1,41 @@
+@oddColor: #F4F4F4;
+@evenColor: #fff;
+.feed{
+	padding: 15px;
+	display: block;
+	ul {
+		a{
+			display: block;
+			border-radius: 6px;
+			&:nth-child(odd){
+				background: @oddColor;
+			}
+			&:nth-child(even) {
+				background: @evenColor;
+			}
+		}
+	}
+	.feed-item{
+		display: flex;
+		justify-content: space-between;
+		margin-bottom: 10px;
+		padding: 10px 10px;
+		width: 100%;
+		box-sizing: border-box;
+		color: #606060;
+		.feed-item-icon{
+			align-self: flex-start;
+			margin-right: 10px;
+		}
+		.feed-item-title{
+			flex: 1;
+			display: flex;
+			align-items: center;
+		}
+		.feed-item-image {
+			margin-left: 10px;
+			width: 48px;
+			height: 48px;
+		}
+	}
+}

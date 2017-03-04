@@ -1,0 +1,43 @@
+@import "../base/fn";
+.doctor {
+  &-item {
+    display: flex;
+    padding: 16px @paddingDistance;
+    position: relative;
+    &-left {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      margin-right: 10px;
+      width: 100px;
+      text-align: center;
+      img {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+      }
+    }
+    &-right {
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+    }
+    &:after {
+      .setBottomLine();
+      left: @paddingDistance;
+    }
+  }
+  &-info {
+    font-size: 18px;
+    color: #494949;
+  }
+  &-skill {
+    margin-bottom: 6px;
+    height: 54px;
+    line-height: 18px;
+    font-size: 16px;
+    color: #ffaba9;
+    overflow: hidden;
+  }
+}

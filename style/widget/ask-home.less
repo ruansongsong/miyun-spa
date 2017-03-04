@@ -1,0 +1,153 @@
+@import "../base/fn";
+.body {
+  background: @bgBodyColor;
+}
+.ask {
+  &-body {
+    position: relative;
+    background: @bgDefaultColor;
+    &:before {
+      .setTopLine();
+    }
+    &:after {
+      .setBottomLine();
+    }
+  }
+}
+.ask {
+    &-item {
+      padding: 4px @paddingDistance;
+      position: relative;
+      &:after {
+        .setBottomLine();
+        left: 16px;
+      }
+      &-patient {
+        padding: 8px 0;
+        color: @colorTextCaption;
+        font-size: fontSizeSmall;
+        &-name {
+          display: inline-block;
+          color: inherit;
+          font-size: inherit;
+        }
+        &-time {
+          display: inline-block;
+          margin-left: 20px;
+          color: inherit;
+          font-size: @fontSizeSmaller;
+        }
+        &-symptom {
+          font-size: 20px;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          line-height: 20px;
+          color: @colorTextDefault;
+        }
+      }
+      &-doctor {
+        display: flex;
+        align-items: center;
+        padding: 10px 0;
+        &-avatar {
+          width: 60px;
+          height: 60px;
+          border-radius: 50%;
+          border: 0;
+          align-self: flex-start;
+        }
+        &-button {
+          display: inline-block;
+          width: 60%;
+          height: 40px;
+          text-align: center;
+          margin-left: 10%;
+          line-height: 40px;
+          color: #fff;
+          background: @bgBtnColor;
+          border-radius: 8px;
+          &:active {
+            background: @bgBtnActiveColor;
+            color: rgba(255, 255, 255, .6);
+          }
+        }
+        &-name {
+          color: @colorTextCaption;
+          font-size: @fontSizeSmall;
+          span {
+            &:last-child {
+              display: inline-block;
+              margin-left: 20px;
+              color: red;
+              font-size: @fontSizeSmaller;
+            }
+          }
+        }
+        &-meta {
+          display: flex;
+          padding: 5px 0;
+          color: @colorTextCaption;
+          justify-content: space-between;
+          font-size: @fontSizeSmall;
+          &-like {
+            padding: 0 0 0 18px;
+            background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAOCAYAAAAfSC3RAAAA0klEQVQ4T52SYRWCQBCEZxJIBEwgNsAG2EASyBnE1QTaQBpoBBpIBEywPo5D5UQR79ftvvfd7cws8efhK6ciUV3TmGKob0EVCQAeACQOKAFdNneeAISunwOa0piqAbdSgJx5U1euDrx+QZPNqSIxwPM4qbqowZUbcwSraQ2GAK8jqFrctNW4A7n+CVbdc2OyRxwqkgGU77B19Gi99vLq16t6A5G10BvoMo2guICc2EcbKPaXovNj+7s1TJE3+SOhMaUvoRd8bpNdv3YROuxHcMjhOyQ0TSZIwGsdAAAAAElFTkSuQmCC) no-repeat;
+            background-position: 0 4px;
+          }
+        }
+      }
+  }
+}
+// 主页上面的ask
+.ask {
+  &-header{
+    position: relative;
+    background: #fff;
+    padding: 16px 16px;
+    width: 100%;
+    text-align: center;
+    z-index: 999;
+    box-sizing: border-box;
+    &-fixed {
+       position: fixed;
+    }
+    &:after {
+      .setBottomLine();
+    }
+  }
+  &-title {
+    font-size: @fontSizeMiddle;
+    color: @colorTextDefault;
+    padding-bottom: 20px;
+    border: 0;
+  }
+  &-button {
+
+      display: inline-block;
+     width: 120px;
+      height: 40px;
+      text-align: center;
+      line-height: 40px;
+      color: #fff;
+      background: @bgBtnColor;
+      border-radius: 8px;
+      &:active {
+        background: @bgBtnActiveColor;
+        color: rgba(255, 255, 255, .6);
+      }    
+  }
+  &-own {
+    text-align: right;
+    a {
+      padding-left: 18px;
+      color: @colorTextDefault;
+      font-size: @fontSizeSmall;
+      background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAOCAYAAAAfSC3RAAABNElEQVQ4T3WS4VXDMAyEPzEBI3QDMkKZgLBBmIC4C1AWiMIG2YB2AjpCO0E7AhMgnhzbz+Y9/CeJo5NOdydUx1TvQd6ALdClX2fgBPYuIXzncskvpjqAKGZHhFlCcACm2mGMQI8wSgiL30dgBBkzwtYBcbLdPcWm8nP0SanBKYMl0buCPRYQ8oXZJbHpUsMavHHgHmMjuzCk6SNGV74nXRBOmaKt3zexSc8IQ7OTM8w7Tur0lgJcd17EdDYJYxGpUdm7E9m4yuVEzH/AJNgeoattWNdx4B+qlT37KGoI8VndZ6qtOE1BtWu5L+JEz7hlD6uCOU7cBTc/nsrLTQ5A70rVYFPtE9VDAbm/2IuEcGgjF9Mjn2AfrT3yitlzsi02amxYU4QHoEfkYeVnFwQv9vyWkP8C2gfItc9JQAAAAAAASUVORK5CYII=) no-repeat;
+      background-position: 0 2px;
+    }
+  }
+}
+.ask-body-wrap {
+  padding-top: 150px;
+}

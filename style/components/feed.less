@@ -1,0 +1,31 @@
+@import '../core/index';
+.feed {
+  padding: 15px;
+  &-item {
+		display: flex;
+		justify-content: space-between;
+		margin-bottom: 10px;
+		padding: 10px 10px;
+		width: 100%;
+		box-sizing: border-box;
+    border-radius: 6px;
+    font-size: @fontSizeSmaller;
+		color: @colorTextCaption;
+    &:nth-child(odd){
+      background: @colorBgPage;
+    }
+    &:nth-child(even) {
+      background: @colorBgDefault;
+    }
+    &-title{
+			flex: 1;
+			display: flex;
+			align-items: center;
+		}
+    &-img {
+			margin-left: 10px;
+			width: 48px;
+			height: 48px;
+		}
+  }
+}

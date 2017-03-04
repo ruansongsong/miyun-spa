@@ -1,0 +1,43 @@
+@import "../base/fn.less";
+.question-header {
+  padding: 10px @paddingDistance;
+  display: flex;
+  justify-content: space-between;
+  &-left {
+    color: #777;
+  }
+  &-right {
+    display: flex;
+    flex-direction: column;
+    width: 150px;
+    justify-content: space-between;
+  }
+}
+.question-item {
+  position: relative;
+  padding: 6px 0;
+  &:after {
+    .setBottomLine();
+    left: 16px;
+  }
+  &-info {
+    margin: 16px;
+    padding: 10px 16px;
+    border-radius: 8px;
+    font-size: @fontSizeSmall;
+    border: 1px solid @colorBorder;
+    box-sizing: border-box;
+  }
+  &-time {
+    color: #ffbdbd;
+  }
+  &-detail {
+    color: #4c4c4c;
+  }
+  &-result {
+    padding: 4px 0;
+    font-size: @fontSizeSmall;
+    color: #ffbdbd;
+    text-align: center;
+  }
+}
